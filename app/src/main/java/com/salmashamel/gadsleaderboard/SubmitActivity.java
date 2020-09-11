@@ -83,6 +83,12 @@ public class SubmitActivity extends AppCompatActivity {
                                         LayoutInflater factorySuccess = LayoutInflater.from(SubmitActivity.this);
                                         View viewSuccess = factorySuccess.inflate(R.layout.submission_successful, null);
                                         alertSuccess.setView(viewSuccess);
+
+                                        AlertDialog alert = alertSuccess.create();
+
+                                        if (alert.isShowing()) {
+                                            alert.dismiss();
+                                        }
                                         alertSuccess.show();
                                     }
                                     else{
@@ -90,6 +96,13 @@ public class SubmitActivity extends AppCompatActivity {
                                         LayoutInflater factoryFail = LayoutInflater.from(SubmitActivity.this);
                                         View viewFail = factoryFail.inflate(R.layout.submission_fail, null);
                                         alertFail.setView(viewFail);
+
+                                        AlertDialog alert = alertFail.create();
+
+                                        if (alert.isShowing()) {
+                                            alert.dismiss();
+                                        }
+
                                         alertFail.show();
                                     }
                                 }

@@ -38,7 +38,12 @@ public class SubmitRepository {
         PostClient.getINSTANCE().submitPorject(email, firstName, lastName, githubLink).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                submitDoneLiveData.setValue(true);
+                if(response.isSuccessful()) {
+                    submitDoneLiveData.setValue(true);
+                }
+                else{
+                    submitDoneLiveData.setValue(false);
+                }
             }
 
             @Override
