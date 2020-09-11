@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivBadge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLeaderName"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivBadge"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Leader name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDataCountry"
+                android:layout_below="@+id/tvLeaderName"
+                android:text="country learning hours"
+                android:layout_toRightOf="@+id/ivBadge"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
